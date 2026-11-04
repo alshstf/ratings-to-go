@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../ui.css" />
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body class="popup">
+    <header>
+      <img src="../../icons/icon32.png" alt="" width="20" height="20" />
+      <h1 data-i18n="extName"></h1>
+    </header>
+
+    <section id="here" hidden>
+      <p id="here-text"></p>
+      <button id="start" class="primary"></button>
+    </section>
+
+    <section id="elsewhere" hidden>
+      <p data-i18n="openSite"></p>
+      <ul id="sites"></ul>
+    </section>
+
+    <section id="job" hidden>
+      <p id="job-text"></p>
+      <progress id="job-progress" hidden></progress>
+      <p id="job-hint" class="hint"></p>
+      <div class="row">
+        <button id="download" data-i18n="downloadCSV"></button>
+        <button id="send" data-i18n="sendToServer" hidden></button>
+      </div>
+      <p id="sent" class="hint"></p>
+    </section>
+
+    <footer>
+      <a href="#" id="options" data-i18n="settings"></a>
+    </footer>
+  </body>
+</html>

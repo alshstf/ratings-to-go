@@ -1,0 +1,129 @@
+:root {
+  color-scheme: light dark;
+  --fg: #1c1b1a;
+  --muted: #6b6762;
+  --bg: #ffffff;
+  --line: #dedad5;
+  --accent: #d9480f;
+  --accent-fg: #ffffff;
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #ece9e4;
+    --muted: #a19c95;
+    --bg: #1f1e1c;
+    --line: #3a3835;
+    --accent: #ff7a3d;
+    --accent-fg: #1f1e1c;
+  }
+}
+body {
+  margin: 0;
+  color: var(--fg);
+  background: var(--bg);
+}
+body.popup {
+  width: 340px;
+  padding: 12px 14px;
+}
+body.options {
+  max-width: 560px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+h1 {
+  font-size: 16px;
+  margin: 0;
+}
+body.options h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+h2 {
+  font-size: 16px;
+  margin: 24px 0 4px;
+}
+section {
+  margin: 12px 0;
+}
+p {
+  margin: 6px 0;
+}
+.hint {
+  color: var(--muted);
+}
+ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+button {
+  font: inherit;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+progress {
+  width: 100%;
+}
+label {
+  display: block;
+  margin: 10px 0;
+}
+label > span {
+  display: block;
+  margin-bottom: 4px;
+}
+label.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+label.check > span {
+  margin: 0;
+}
+input[type="url"],
+input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+}
+footer {
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+a {
+  color: var(--accent);
+}
+#here-text::first-letter {
+  text-transform: uppercase;
+}

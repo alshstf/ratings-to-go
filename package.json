@@ -1,0 +1,15 @@
+{
+  "name": "ratings-to-go",
+  "private": true,
+  "type": "module",
+  "description": "Browser extension: export your movie and TV ratings and watch history to CSV or to your own server",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/",
+    "package": "sh scripts/package.sh",
+    "preview": "python3 -m http.server 8765 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

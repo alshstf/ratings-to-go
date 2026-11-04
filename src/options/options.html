@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="settingsTitle"></title>
+    <link rel="stylesheet" href="../ui.css" />
+    <script type="module" src="options.js"></script>
+  </head>
+  <body class="options">
+    <h1 data-i18n="settingsTitle"></h1>
+    <p data-i18n="settingsIntro"></p>
+
+    <h2 data-i18n="serverTitle"></h2>
+    <p class="hint" data-i18n="serverIntro"></p>
+    <label>
+      <span data-i18n="serverAddress"></span>
+      <input id="server" type="url" placeholder="https://argoose.example.com" autocomplete="off" />
+    </label>
+    <label>
+      <span data-i18n="serverToken"></span>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" />
+    </label>
+    <label class="check">
+      <input id="auto" type="checkbox" />
+      <span data-i18n="autoSend"></span>
+    </label>
+    <div class="row">
+      <button id="save" class="primary" data-i18n="save"></button>
+      <button id="check" data-i18n="checkServer"></button>
+      <button id="forget" data-i18n="forgetServer"></button>
+    </div>
+    <p id="status" class="hint" role="status"></p>
+
+    <h2 data-i18n="privacyTitle"></h2>
+    <p class="hint" data-i18n="privacyText"></p>
+  </body>
+</html>

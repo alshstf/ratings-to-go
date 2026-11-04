@@ -1,0 +1,188 @@
+{
+  "extName": {
+    "message": "Ratings To Go"
+  },
+  "extDescription": {
+    "message": "Export your own movie and TV ratings and watch history to CSV or to your own server. Kinopoisk for now, more sites to come."
+  },
+  "sourceKinopoisk": {
+    "message": "Kinopoisk"
+  },
+  "hintKinopoisk": {
+    "message": "sign in and open your profile (kinopoisk.ru/user/…)"
+  },
+  "openSite": {
+    "message": "Open one of these sites in this tab and press the button again:"
+  },
+  "start": {
+    "message": "Export my ratings from $p1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "resume": {
+    "message": "Continue"
+  },
+  "resumeText": {
+    "message": "The export stopped halfway. Pass the check in this tab if the site asks, then continue."
+  },
+  "jobRunning": {
+    "message": "$p1$: page $p2$ of $p3$, $p4$ titles so far. You can close this window — the export goes on while the tab is open.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      },
+      "p3": {
+        "content": "$3"
+      },
+      "p4": {
+        "content": "$4"
+      }
+    }
+  },
+  "jobBlocked": {
+    "message": "$p1$: stopped at $p2$ titles.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "jobError": {
+    "message": "$p1$: failed at $p2$ titles.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "jobDone": {
+    "message": "$p1$: done, $p2$ titles.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "blocked_captcha": {
+    "message": "The site asked to check that you are not a robot. Reload the tab, pass the check, then press Continue."
+  },
+  "blocked_login": {
+    "message": "Sign in to the site and open your profile page, then start again."
+  },
+  "blocked_layout": {
+    "message": "Could not find the list of ratings on the page: the site may have changed. Make sure your profile is open; if it is, please report it."
+  },
+  "downloadCSV": {
+    "message": "Download CSV"
+  },
+  "sendToServer": {
+    "message": "Send to my server"
+  },
+  "sentError": {
+    "message": "Could not send: $p1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentOK": {
+    "message": "Sent: $p1$, new $p2$.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "settingsTitle": {
+    "message": "Ratings To Go — settings"
+  },
+  "settingsIntro": {
+    "message": "The extension saves your ratings as a CSV file on your computer. It can also send them to a server of your own, such as Argoose."
+  },
+  "serverTitle": {
+    "message": "Your server"
+  },
+  "serverIntro": {
+    "message": "Optional. The address of your server and a token made on it (in Argoose: page «Оценки», card «Расширение браузера»). The ratings go to <address>/api/ratings/import."
+  },
+  "serverAddress": {
+    "message": "Address"
+  },
+  "serverToken": {
+    "message": "Token"
+  },
+  "autoSend": {
+    "message": "Send automatically when an export is done"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "checkServer": {
+    "message": "Check"
+  },
+  "forgetServer": {
+    "message": "Forget the server"
+  },
+  "privacyTitle": {
+    "message": "Privacy"
+  },
+  "privacyText": {
+    "message": "The extension reads only the rating pages of the site you start an export on, only when you press the button, with your own session. What it collects stays in this browser and goes nowhere but the server you enter here. No analytics, no other servers."
+  },
+  "errServerAddress": {
+    "message": "Not an address. It looks like https://argoose.example.com"
+  },
+  "errServerHttps": {
+    "message": "The address must start with https:// (http:// only for localhost)."
+  },
+  "saved": {
+    "message": "Saved."
+  },
+  "checking": {
+    "message": "Checking…"
+  },
+  "checkOK": {
+    "message": "The server answers, token «$p1$» fits.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "checkBadToken": {
+    "message": "The server answers, but the token does not fit: make a new one."
+  },
+  "checkFailed": {
+    "message": "No answer: $p1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "The server and the token are removed."
+  }
+}
