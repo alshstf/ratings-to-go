@@ -1,3 +1,5 @@
+import { compact } from "./items.js";
+
 // The user's own server (Argoose or anything that speaks the same): items
 // go to POST <server>/api/ratings/import as {"items": [...]}, with the
 // token as a Bearer header. Nothing is sent anywhere else.
@@ -41,9 +43,10 @@ async function call(settings, path, init) {
 // whoami checks the address and the token: the token's name on the server.
 export const whoami = (settings) => call(settings, "/api/access/whoami", { method: "GET" });
 
+// send posts the items without their empty fields (see compact).
 export const send = (settings, items) =>
   call(settings, "/api/ratings/import", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ items }),
+    body: JSON.stringify({ items: items.map(compact) }),
   });

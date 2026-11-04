@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { columns, merge, toCSV } from "../src/core/items.js";
+import { columns, compact, merge, toCSV } from "../src/core/items.js";
 import { checkServer } from "../src/core/server.js";
 import { sourceFor } from "../src/core/sources.js";
 
@@ -33,4 +33,22 @@ test("sources by address", () => {
   assert.equal(sourceFor("https://www.kinopoisk.ru/user/1/votes/")?.id, "kinopoisk");
   assert.equal(sourceFor("https://example.com/"), null);
   assert.equal(sourceFor("chrome://extensions"), null);
+});
+
+test("compact leaves out empty fields, keeps the rest", () => {
+  const it = { source: "kinopoisk", source_id: "1", title: "Дурак", original_title: "", year: 2014, rating: 9, watched_at: "", imdb_id: null };
+  assert.deepEqual(compact(it), { source: "kinopoisk", source_id: "1", title: "Дурак", year: 2014, rating: 9 });
+});
+
+test("send posts compact items with the token", async () => {
+  const calls = [];
+  globalThis.fetch = async (url, init) => {
+    calls.push({ url, init });
+    return new Response(JSON.stringify({ rows: 1 }), { status: 200 });
+  };
+  const { send } = await import("../src/core/server.js");
+  await send({ server: "https://argoose.example/", token: "argoose_x" }, [{ source: "kinopoisk", title: "Дурак", watched_at: "" }]);
+  assert.equal(calls[0].url, "https://argoose.example/api/ratings/import");
+  assert.equal(calls[0].init.headers.Authorization, "Bearer argoose_x");
+  assert.deepEqual(JSON.parse(calls[0].init.body), { items: [{ source: "kinopoisk", title: "Дурак" }] });
 });

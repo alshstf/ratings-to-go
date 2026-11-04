@@ -45,6 +45,17 @@ export function merge(into, items) {
   return into;
 }
 
+// compact is the item without its empty fields, as it is sent to a server:
+// a field left out is "unknown", never an empty date or id.
+export function compact(item) {
+  const out = {};
+  for (const [k, v] of Object.entries(item)) {
+    if (v === undefined || v === null || v === "" || v === 0) continue;
+    out[k] = v;
+  }
+  return out;
+}
+
 // toCSV is the items as CSV: UTF-8 with a BOM (Excel then shows Cyrillic),
 // commas, every text field quoted.
 export function toCSV(items) {
