@@ -7,7 +7,7 @@ sites where you have an account (Kinopoisk for now) to a CSV file, and optionall
 
 ## What it reads
 
-- Only the pages that list your ratings on the site whose tab is open, and only after you press the export
+- Only the pages that list your ratings and what you marked as watched on the site whose tab is open, and only after you press the export
   button in that tab. It reads them with the session you are already signed in with, at a slow pace (one
   page every few seconds), and stops if the site asks you to pass a check.
 - For each title: its id and address on the site, its title, original title, year, kind (movie or series),
@@ -44,7 +44,7 @@ Questions: open an issue at <https://github.com/alshstf/ratings-to-go/issues>.
 историю просмотров с сайтов, где у вас есть аккаунт (пока — Кинопоиск), в файл CSV и, по желанию, на сервер,
 который вы держите сами.
 
-**Что читает.** Только страницы со списком ваших оценок на сайте, открытом во вкладке, и только после того,
+**Что читает.** Только страницы со списком ваших оценок и просмотренного на сайте, открытом во вкладке, и только после того,
 как вы нажали кнопку выгрузки в этой вкладке. Читает с той сессией, с которой вы уже вошли, неспешно (страница
 в несколько секунд) и останавливается, если сайт просит пройти проверку. Для каждого тайтла: его id и адрес
 на сайте, название, оригинальное название, год, тип (фильм или сериал), вашу оценку и когда вы её поставили

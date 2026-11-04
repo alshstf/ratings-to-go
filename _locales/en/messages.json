@@ -149,7 +149,7 @@
     "message": "Privacy"
   },
   "privacyText": {
-    "message": "The extension reads only the rating pages of the site you start an export on, only when you press the button, with your own session. What it collects stays in this browser and goes nowhere but the server you enter here. No analytics, no other servers."
+    "message": "The extension reads only the rating and watched pages of the site you start an export on, only when you press the button, with your own session. What it collects stays in this browser and goes nowhere but the server you enter here. No analytics, no other servers."
   },
   "errServerAddress": {
     "message": "Not an address. It looks like https://argoose.example.com"

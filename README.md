@@ -3,7 +3,8 @@
 A browser extension that exports **your own** movie and TV ratings and watch history from the sites you use
 to a CSV file — or straight to your own server (for example [Argoose](#argoose)).
 
-Sources so far: **Kinopoisk** (your votes). Built to take more — IMDb, Netflix, streaming services — each one a
+Sources so far: **Kinopoisk** — your votes with their dates, then what you marked as watched without a score
+(«Оценки и просмотры»; the site shows no date for those). Built to take more — IMDb, Netflix, streaming services — each one a
 small file in `src/sources/`.
 
 ## How it works
