@@ -5,7 +5,7 @@
   "description": "Browser extension: export your movie and TV ratings and watch history to CSV or to your own server",
   "license": "MIT",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test \"test/*.test.js\"",
     "package": "sh scripts/package.sh",
     "preview": "python3 -m http.server 8765 --bind 127.0.0.1"
   },
